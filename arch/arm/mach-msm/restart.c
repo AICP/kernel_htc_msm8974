@@ -401,7 +401,7 @@ static void __msm_power_off(int lower_pshold)
 	gpio_set_value(TP_RST, 0);
 	msleep(10);
 
-	force_disable_PMICGPIO34();
+	// force_disable_PMICGPIO34();
 	msleep(10);
 
 	gpio_tlmm_config(GPIO_CFG(SRIO_1V8_EN, 0, GPIO_CFG_OUTPUT, GPIO_CFG_NO_PULL, GPIO_CFG_2MA), GPIO_CFG_ENABLE);
@@ -594,7 +594,11 @@ void msm_restart(char mode, const char *cmd)
 		/* Needed to bypass debug image on some chips */
 		msm_disable_wdog_debug();
 		halt_spmi_pmic_arbiter();
+#if defined(CONFIG_ARCH_MSM8226) && defined(CONFIG_HTC_DEBUG_WATCHDOG)
+		msm_watchdog_reset();
+#else
 		__raw_writel(0, MSM_MPM2_PSHOLD_BASE);
+#endif
 	}
 
 	mdelay(10000);

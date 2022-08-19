@@ -188,7 +188,6 @@ int32_t imx214_read_otp_memory(uint8_t *otpPtr, struct sensorb_cfg_data *cdata, 
 	int page = 0, i = 0, j = 0;
 	short OTP_addr = 0x0A04;
 
-	
 	for (page = 0; page < 16; page++) {
 		rc = s_ctrl->sensor_i2c_client->i2c_func_tbl->i2c_write(s_ctrl->sensor_i2c_client, 0x0A02, page, MSM_CAMERA_I2C_BYTE_DATA);
 		if (rc < 0)
