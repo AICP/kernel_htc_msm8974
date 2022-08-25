@@ -514,7 +514,7 @@ struct files_struct init_files = {
 		.open_fds	= init_files.open_fds_init,
 		.user		= &init_files.user_array[0],
 	},
-	.file_lock	= __SPIN_LOCK_UNLOCKED(init_task.file_lock),
+	.file_lock	= __SPIN_LOCK_UNLOCKED(init_files.file_lock),
 };
 
 /*
