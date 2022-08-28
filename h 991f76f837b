@@ -1,0 +1,148 @@
+[33m18b3310ef7e[m stop passing nameidata to ->lookup()
+[33m2645e483e4c[m stop passing nameidata * to ->d_revalidate()
+[33m6615e6db12b[m sysfs: fix use after free in case of concurrent read/write and readdir
+[33mcde9833c97c[m sysfs: handle failure path correctly for readdir()
+[33m01fadbb46b6[m sysfs: fix race between readdir and lseek
+[33mfa3b39b05f4[m sysfs: sysfs_pathname/sysfs_add_one: Use strlcat() instead of strcat()
+[33m3a198886ab5[m sysfs: handle 'parent deleted before child added'
+[33m70fa4a62e91[m sysfs: Update the name hash for an entry after changing the namespace
+[33m54d20f006ce[m Revert "sysfs: Kill nlink counting."
+[33md5c38b137ac[m sysfs: Update the name hash when renaming sysfs entries
+[33m524b6c5b39b[m sysfs: Kill nlink counting.
+[33mcafa6b5dd7c[m sysfs: Store the sysfs inode in an unsigned int.
+[33m4e4d6d860b9[m sysfs: Add s_hash to sysfs_dirent and order directory entries by hash
+[33mf6d90b4f9ce[m sysfs: Make sysfs_rename safe with sysfs_dirents in rbtrees.
+[33mb9e2780d576[m sysfs: Remove support for tagged directories with untagged members (again)
+[33m8a9ea3237e7[m Merge git://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next
+[33m903e21e2eea[m sysfs: Reject with a warning invalid uses of tagged directories.
+[33m23396180a97[m sysfs: Remove support for tagged directories with untagged members.
+[33mc4253cb0748[m sysfs: add unsigned long cast to prevent compile warning
+[33ma406f75840e[m sysfs: use rb-tree for inode number lookup
+[33m58f2a4c7932[m sysfs: remove s_sibling hacks
+[33m4f72c0cab40[m sysfs: use rb-tree for name lookups
+[33m7f9838fd018[m sysfs: count subdirectories
+[33m34286d66623[m fs: rcu-walk aware d_revalidate method
+[33mfb045adb99d[m fs: dcache reduce branches in lookup path
+[33mfe15ce446be[m fs: change d_delete semantics
+[33mbe867b194a3[m sysfs: Comment sysfs directory tagging logic
+[33maf10ec77b43[m sysfs: Add support for tagged directories with untagged members.
+[33m3ff195b011d[m sysfs: Implement sysfs tagged directory support.
+[33mfac2622bbad[m sysfs: Pass super_block to sysfs_get_inode
+[33ma2db6842873[m sysfs: Only take active references on attributes.
+[33me72ceb8ccac[m sysfs: Remove sysfs_get/put_active_two
+[33m1e5289c97bb[m sysfs: Cache the last sysfs_dirent to improve readdir scalability v2
+[33m846f99749ab[m sysfs: Add lockdep annotations for the sysfs active reference
+[33mca1bab38195[m sysfs: Factor out sysfs_rename from sysfs_rename_dir and sysfs_move_dir
+[33m832b6af198a[m sysfs: Propagate renames to the vfs on demand
+[33ma16bbc3430e[m sysfs: Gut sysfs_addrm_start and sysfs_addrm_finish
+[33me61ab4ae48f[m sysfs: Implement sysfs_getattr & sysfs_permission
+[33m6b0bfe9383a[m sysfs: Update s_iattr on link and unlink.
+[33me8f077c8831[m sysfs: Use dentry_ops instead of directly playing with the dcache
+[33m28a027cfc0d[m sysfs: Rename sysfs_d_iput to sysfs_dentry_iput
+[33m4c3da2209b1[m sysfs: Don't leak secdata when a sysfs_dirent is freed.
+[33ma6a8357788d[m sysfs: Allow sysfs_move_dir(..., NULL) again.
+[33mddd29ec6597[m sysfs: Add labeling support for sysfs
+[33m0f58b445820[m sysfs: fix hardlink count on device_move
+[33m3ae5080f4c2[m Merge branch 'for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/viro/vfs-2.6
+[33mee1ec32903f[m constify dentry_operations: sysfs
+[33me0edd3c65aa[m sysfs: don't block indefinitely for unmapped files.
+[33m425cb02912d[m sysfs: sysfs_add_one WARNs with full path to duplicate filename
+[33m3222a3e55f4[m [PATCH] fix ->llseek for more directories
+[33m0b4a4fea253[m kobject: Cleanup kobject_rename and !CONFIG_SYSFS
+[33m45c076c5d71[m sysfs: use ilookup5() instead of ilookup5_nowait()
+[33mf1282c844e8[m sysfs: Support sysfs_notify from atomic context with new sysfs_notify_dirent
+[33m99fcd77d153[m Use WARN() in fs/sysfs
+[33m36ce6dad6e3[m driver core: Suppress sysfs warnings for device_rename().
+[33m0599ad53fee[m sysfs: remove error messages for -EEXIST case
+[33mc6f87733823[m SYSFS: Explicitly include required header file slab.h.
+[33m9fd5b1c906a[m sysfs: Fix a copy-n-paste typo in comment
+[33m456ef1553cb[m sysfs: fix bugs in sysfs_rename/move_dir()
+[33me49452c6770[m sysfs: make sysfs_lookup() return ERR_PTR(-ENOENT) on failed lookup
+[33m78e9d3678c8[m sysfs: make sysfs_{get,put}_active() static
+[33mf7a75f0a400[m spin_lock_unlocked cleanups
+[33meead1911532[m partially fix up the lookup_one_noperm mess
+[33m6d66f5cd26e[m sysfs: add copyrights
+[33ma4e8b912541[m sysfs: move sysfs file poll implementation to sysfs_open_dirent
+[33mbc747f37a0f[m sysfs: move sysfs_dirent->s_children into sysfs_dirent->s_dir
+[33md6b4fd2faeb[m sysfs: open code sysfs_attach_dentry()
+[33mb1fc3d6144d[m sysfs: make s_elem an anonymous union
+[33m181b2e4be16[m sysfs: fix comments of sysfs_add/remove_one()
+[33m5c3e8964ce8[m sysfs: spit a warning to users when they try to create a duplicate sysfs file
+[33m45aaae9c51d[m sysfs: Rewrite sysfs_move_dir in terms of sysfs dirents
+[33m9918f9a4817[m sysfs: Rewrite rename in terms of sysfs dirents
+[33m5a26b79c426[m sysfs: Remove s_dentry
+[33me0712bbfd9c[m sysfs: simply sysfs_get_dentry
+[33m932ea2e374d[m sysfs: Introduce sysfs_rename_mutex
+[33m89bec09705d[m sysfs: Rewrite sysfs_drop_dentry.
+[33m3efa65b92d8[m sysfs: Simplify readdir.
+[33m94777e09180[m sysfs: In sysfs_lookup don't open code sysfs_find_dirent
+[33m7d0c7d676cc[m sysfs: Make sysfs_mount static
+[33m119dd52be33[m sysfs: Remove sysfs_instantiate
+[33m372e88bd192[m sysfs: Move all of inode initialization into sysfs_init_inode
+[33m253280267a7[m sysfs: fix i_mutex locking in sysfs_get_dentry()
+[33m990e53f880b[m sysfs: make sysfs_addrm_finish() return void
+[33m23dc279950a[m sysfs: make sysfs_add_one() automatically check for duplicate entry
+[33m41fc1c27452[m sysfs: make sysfs_add/remove_one() call link/unlink_sibling() implictly
+[33mff869de7bf5[m sysfs: simplify sysfs_rename_dir()
+[33ma7a0475497f[m sysfs: cosmetic changes in sysfs_lookup()
+[33m90bc61359de[m sysfs: Remove first pass at shadow directory support
+[33m869512ab5ab[m sysfs: cleanup semaphore.h
+[33m19c38de88a8[m kobjects: fix up improper use of the kobject name field
+[33m6cb52147b25[m sysfs: fix locking in sysfs_lookup() and sysfs_rename_dir()
+[33m967e35dcc9a[m sysfs: cosmetic clean up on node creation failure paths
+[33m01da2425f32[m sysfs: avoid kmem_cache_free(NULL)
+[33m51225039f3c[m sysfs: make directory dentries and inodes reclaimable
+[33m53e0ae92690[m sysfs: implement sysfs_get_dentry()
+[33ma0edd7c8489[m sysfs: move sysfs_drop_dentry() to dir.c and make it static
+[33mfb6896da37f[m sysfs: restructure add/remove paths and fix inode update
+[33m3007e997de9[m sysfs: use sysfs_mutex to protect the sysfs_dirent tree
+[33m5f9953237f6[m sysfs: consolidate sysfs spinlocks
+[33m608e266a2d4[m sysfs: make kobj point to sysfs_dirent instead of dentry
+[33mf0b0af4792d[m sysfs: implement sysfs_find_dirent() and sysfs_get_dirent()
+[33m380e6fbb729[m sysfs: implement SYSFS_FLAG_REMOVED flag
+[33mb402d72cf7b[m sysfs: rename sysfs_dirent->s_type to s_flags and make room for flags
+[33m0c73f18b7d9[m sysfs: use singly-linked list for sysfs_dirent tree
+[33m8619f979898[m sysfs: slim down sysfs_dirent->s_active
+[33mb6b4a4399c2[m sysfs: move s_active functions to fs/sysfs/dir.c
+[33m8312a8d7c1d[m sysfs: use iget_locked() instead of new_inode()
+[33mfc9f54b9982[m sysfs: reorganize sysfs_new_indoe() and sysfs_create()
+[33m7f7cfffe60e[m sysfs: fix parent refcounting during rename and move
+[33m42b37df6abb[m sysfs: make sysfs_alloc_ino() static
+[33mdbde0fcf9f8[m sysfs: reimplement sysfs_drop_dentry()
+[33m198a2a84701[m sysfs: separate out sysfs_attach_dentry()
+[33m0ab66088c85[m sysfs: implement sysfs_dirent active reference and immediate disconnect
+[33m2b29ac252af[m sysfs: reimplement symlink using sysfs_dirent tree
+[33maecdcedaab4[m sysfs: implement kobj_sysfs_assoc_lock
+[33m3e5190380eb[m sysfs: make sysfs_dirent->s_element a union
+[33m0c096b507f1[m sysfs: add sysfs_dirent->s_name
+[33m13b3086d2ea[m sysfs: add sysfs_dirent->s_parent
+[33ma26cd7226c2[m sysfs: consolidate sysfs_dirent creation functions
+[33m996b73764e9[m sysfs: flatten and fix sysfs_rename_dir() error handling
+[33mdfeb9fb0343[m sysfs: flatten cleanup paths in sysfs_add_link() and create_dir()
+[33m2b611bb7abd[m sysfs: allocate inode number using ida
+[33mfa7f912ad4a[m sysfs: move release_sysfs_dirent() to dir.c
+[33mdd14cbc9947[m sysfs: fix race condition around sd->s_dentry, take#2
+[33mdc351252b33[m sysfs: store sysfs inode nrs in s_ino to avoid readdir oopses
+[33m0de1517e23c[m [PATCH] Fix 2.6.21 rfcomm lockups
+[33mc5ef1c42c51[m [PATCH] mark struct inode_operations const 3
+[33mc376222960a[m [PATCH] Transform kmem_cache_alloc()+memset(0) -> kmem_cache_zalloc().
+[33mb592fcfe7f0[m sysfs: Shadow directory support
+[33m94bebf4d1b8[m Driver core: fix race in sysfs between sysfs_remove_file() and read()/write()
+[33mc744aeae9d1[m driver core: Allow device_move(dev, NULL).
+[33mf427f5d5d6b[m [PATCH] sysfs: change uses of f_{dentry, vfsmnt} to use f_path
+[33m8a82472f86b[m driver core: Introduce device_move(): move a device to a new parent.
+[33md8c76e6f45c[m [PATCH] r/o bind mount prepwork: inc_nlink() helper
+[33meea3f8911f3[m sysfs: Make poll behaviour consistent
+[33m1bfba4e8ea0[m [PATCH] core: use list_move()
+[33m4508a7a734b[m [PATCH] sysfs: Allow sysfs attribute files to be pollable
+[33ma580290c3e6[m Documentation: fix minor kernel-doc warnings
+[33m4b6f5d20b04[m [PATCH] Make most file operations structs in fs/ const
+[33m832c57e9afa[m [PATCH] sysfs: don't export dir symbols
+[33mc516865cfba[m [PATCH] sysfs: fix problem with duplicate sysfs directories and files
+[33m641e6f30a09[m [PATCH] sysfs: sysfs_remove_dir() needs to invalidate the dentry
+[33m1b1dcc1b57a[m [PATCH] mutex subsystem, semaphore to mutex: VFS, ->i_sem
+[33me80a5dea8e0[m [PATCH] sysfs: handle failures in sysfs_make_dirent
+[33m5f45f1a78fb[m [PATCH] remove duplicate get_dentry functions in various places
+[33m988d186de5b[m [PATCH] sysfs-iattr: add sysfs_setattr
+[33m6fa5c828c7f[m [PATCH] sysfs-iattr: attach sysfs_dirent before new inode
+[33m1da177e4c3f[m Linux-2.6.12-rc2
